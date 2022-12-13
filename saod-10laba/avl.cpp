@@ -95,6 +95,19 @@ avl::avl()
     root = NULL;
 }
 
+void avl::inorder()
+{
+    inorder(root);
+}
+
+void avl::inorder(Node* tree)
+{
+    if (tree == NULL)
+        return;
+    inorder(tree->left);
+    cout << tree->data << " ";
+    inorder(tree->right);
+}
 void avl::insert(int data)
 {
     root = insert(data, root);

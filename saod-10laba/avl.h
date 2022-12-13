@@ -27,10 +27,12 @@ class avl
     int height(Node* tree);
     void print(Node const* node, string prefix = "", bool root = true, bool last = true);
     Node* find(Node* tree, int value);
+    void inorder(Node* tree);
 public:
 
     avl();
-
+    void inorder();
+    
     void insert(int data);
     void display();
     Node* find(int value);
